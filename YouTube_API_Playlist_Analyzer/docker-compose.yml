@@ -16,8 +16,6 @@ services:
       - 8000:8000
     depends_on:
       - db
-    environment:
-      - "SECRET_KEY=0$e+ts2)hw)ab&p_lkkhaat0x=m4)q=h9uyz5wk+dkhf(&mowm"
-      - "YOUTUBE_API_KEY=AIzaSyBLLTTMYPMROMDrEbtRX6kZFuWW615GyVQ"
+
 volumes:
   postgres_data:
