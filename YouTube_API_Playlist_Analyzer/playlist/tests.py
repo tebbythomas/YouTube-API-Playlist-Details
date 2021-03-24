@@ -22,7 +22,7 @@ playlist_id = 'PLrtCHHeadkHptUb0gduz9pxLgvtKWznKj'
 from .models import Playlist
 
 def test_get_playlist():
-    url = f'http://127.0.0.1:8000/playlist/{playlist_id}'
+    url = f'http://0.0.0.0:8000/playlist/{playlist_id}'
     response = requests.get(url)
     assert response.status_code == 200
     assert Playlist.objects.filter(id=playlist_id).count() == 1
