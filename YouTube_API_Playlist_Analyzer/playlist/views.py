@@ -12,7 +12,7 @@ from google.auth.transport.requests import Request
 import pickle
 from dotenv import load_dotenv
 import os
-from rest_framework.exceptions import APIException
+from rest_framework.exceptions import NotFound
 
 load_dotenv()
 
@@ -99,7 +99,7 @@ class PlaylistViewSet(DynamicModelViewSet):
             basic_details["channel_title"] = response["items"][0]["snippet"]["channelTitle"]
             basic_details["video_count"] = response["items"][0]["contentDetails"]["itemCount"]
         else:
-            raise APIException("Invalid playlist id entered")
+            raise NotFound("Invalid playlist id entered")
         return basic_details
 
     def retrieve(self, request, pk=None, *args, **kwargs):
