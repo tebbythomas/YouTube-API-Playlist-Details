@@ -16,7 +16,6 @@ from rest_framework.exceptions import NotFound
 # load_dotenv()
 
 YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY')
-print(f"YOUTUBE_API_KEY={YOUTUBE_API_KEY}")
 
 youtube_obj = build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
 
