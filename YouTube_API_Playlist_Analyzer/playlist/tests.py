@@ -25,4 +25,4 @@ class PlaylistTests(APITestCase, URLPatternsTestCase):
         response = self.client.get(url,
                                    format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(Playlist.objects.filter(id=playlist_id).count(), 0)
+        self.assertEqual(Playlist.objects.filter(id=playlist_id).count(), 1)
