@@ -1,5 +1,9 @@
-*env
-*idea
+*.log
+*.pot
+*.pyc
 *.zip
-*sql*
-*pycache*
+*env
+*.idea
+*__pycache__
+db.sqlite3
+media

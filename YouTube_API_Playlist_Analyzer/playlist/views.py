@@ -10,13 +10,20 @@ import json
 import google_auth_oauthlib.flow
 from google.auth.transport.requests import Request
 import pickle
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 from rest_framework.exceptions import NotFound
+import environ
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+# reading .env file
+environ.Env.read_env()
+# load_dotenv()
 
-load_dotenv()
-
-YOUTUBE_API_KEY = 'AIzaSyBLLTTMYPMROMDrEbtRX6kZFuWW615GyVQ'
+# YOUTUBE_API_KEY = 'AIzaSyBLLTTMYPMROMDrEbtRX6kZFuWW615GyVQ'
+YOUTUBE_API_KEY = env('YOUTUBE_API_KEY')
 
 youtube_obj = build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
 
