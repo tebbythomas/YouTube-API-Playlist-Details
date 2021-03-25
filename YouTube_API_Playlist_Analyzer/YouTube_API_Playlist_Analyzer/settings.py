@@ -24,6 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = '0$e+ts2)hw)ab&p_lkkhaat0x=m4)q=h9uyz5wk+dkhf(&mowm'
 SECRET_KEY = os.getenv('SECRET_KEY')
+print(f"SECRET_KEY={SECRET_KEY}")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -83,8 +84,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres',
-        'HOST': 'db', # set in docker-compose.yml
-        'PORT': 5432 # default postgres port
+        'HOST': 'db',
+        'PORT': 5432
     }
 }
 
