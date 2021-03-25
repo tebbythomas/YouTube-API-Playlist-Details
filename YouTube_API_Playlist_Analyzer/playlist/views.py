@@ -23,7 +23,7 @@ environ.Env.read_env()
 # load_dotenv()
 
 # YOUTUBE_API_KEY = 'AIzaSyBLLTTMYPMROMDrEbtRX6kZFuWW615GyVQ'
-YOUTUBE_API_KEY = env('YOUTUBE_API_KEY')
+YOUTUBE_API_KEY = os.environ.get('YOUTUBE_API_KEY')
 
 youtube_obj = build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
 
