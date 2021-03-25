@@ -15,7 +15,6 @@ import os
 from rest_framework.exceptions import NotFound
 # load_dotenv()
 
-# YOUTUBE_API_KEY = 'AIzaSyBLLTTMYPMROMDrEbtRX6kZFuWW615GyVQ'
 YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY')
 print(f"YOUTUBE_API_KEY={YOUTUBE_API_KEY}")
 
